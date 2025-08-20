@@ -3311,7 +3311,7 @@ resource "aws_s3_bucket_acl" "dev" {
   ]
 
   bucket = aws_s3_bucket.dev.id
-  acl    = "public-read"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_policy" "allow_access_for_dev" {
