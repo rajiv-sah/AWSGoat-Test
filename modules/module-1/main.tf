@@ -3324,7 +3324,7 @@ data "aws_iam_policy_document" "allow_get_list_access" {
   statement {
     principals {
       type        = "AWS"
-      identifiers = ["*"]
+      identifiers = [data.aws_caller_identity.current.account_id]
     }
     actions = ["s3:GetObject", "s3:ListBucket"]
     resources = [
